@@ -1,17 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <BestCommentFormEver />
+    <BestCommentList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BestCommentFormEver from './components/BestCommentFormEver.vue';
+import BestCommentList from './components/BestCommentList.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    BestCommentFormEver,
+    BestCommentList,
+  },
+};
 </script>
 
 <style>
@@ -22,5 +26,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 </style>
