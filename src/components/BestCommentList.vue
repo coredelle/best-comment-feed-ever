@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="comments">
     <h2>Comments</h2>
     <div v-for="comment in comments" :key="comment.id" class="comment">
       <p>{{ comment.message }}</p>
@@ -37,8 +37,24 @@ export default {
 </script>
 
 <style scoped>
-.comment {
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+.comments {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
 }
+
+.comment {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0 0 5px;
+}
+
 </style>
