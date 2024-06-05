@@ -33,6 +33,7 @@ export default {
       };
       try {
         const response = await Api.post('/createComment', newComment);
+        this.$emit('submitComment', newComment);
         this.$socket.emit('commentAdded', response);
         this.name = '';
         this.message = '';
